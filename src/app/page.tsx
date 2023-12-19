@@ -21,7 +21,7 @@ import { Toaster } from '@/components/ui/toaster';
 export default function Home() {
 
   const api = axios.create({
-    baseURL: "http://localhost:3456",
+    baseURL: "https://api-consulta-sei.ib.itaborai.rj.gov.br",
   })
 
   const { toast } = useToast()
