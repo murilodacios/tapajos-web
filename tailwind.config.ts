@@ -6,7 +6,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     container: {
       center: true,
@@ -16,6 +16,10 @@ module.exports = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        '94': '1fr 3fr',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
