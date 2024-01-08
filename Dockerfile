@@ -1,7 +1,7 @@
 FROM node:18
 
 RUN mkdir -p /usr/src/app
-ENV PORT 8118
+ENV PORT 3009
 
 WORKDIR /usr/src/app
 
@@ -14,5 +14,6 @@ COPY . /usr/src/app
 
 RUN yarn build
 
-EXPOSE 8118
+EXPOSE 3009
 CMD [ "yarn", "start" ]
+
