@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Easy Entregas',
-  description: 'Consulta seus processos no SEI!',
+  title: 'Tapajós Carbon',
+  description: 'A primeira ecofintech do Brasil',
 }
 
 export default function RootLayout({
@@ -15,10 +15,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='scroll-smooth'>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/ewk1yik.css" />
+      </head>
       <body className={inter.className}>
         <main>{children}</main>
-     
+
       </body>
     </html>
   )

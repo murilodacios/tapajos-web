@@ -2,47 +2,51 @@
 
 import Link from "next/link"
 import { Button } from "../ui/button"
-import { usePathname } from "next/navigation"
+import Image from "next/image";
 
 export const Header = () => {
 
-    const router = usePathname()
-
-    const url = router
 
     return (
-        <div className='flex flex-row justify-between items-center w-full p-2'>
-            <p>easy<strong>entregas</strong></p>
-            <ul className='flex flex-row gap-4 text-sm'>
-                <li className={`${url === "/" ? "text-slate-900" : "text-slate-500"}`}>
-                    <Link href="/">
-                        Painel
+        <header className="bg-tapajos-black text-white">
+            <div className="max-w-screen-xl m-auto flex flex-row justify-between items-center w-full p-4">
+                <Image src="/logo.svg" width={120} height={10} alt="Tapajós Carbon Credits" />
+                <ul className='hidden md:flex flex-row gap-6 text-sm border-1 p-2 px-8 rounded-xl border-green-950 z-20'>
+
+                    <li>
+                        <Link href="/#produtos">
+                            Produtos
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link href="/#plataforma">
+                            Plataforma
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link href="/#sobre">
+                            Sobre
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link href="/#blog">
+                            Blog
+                        </Link>
+                    </li>
+
+                </ul>
+                <div className="hidden sm:flex flex-row gap-4 items-center">
+                    <Link href="/" className="text-sm">
+                        Entrar
                     </Link>
-                </li>
-                <li className={`${url === "/categorias" ? "text-slate-900" : "text-slate-500"}`}>
-                    <Link href="/categorias">
-                        Categorias
-                    </Link>
-                </li>
-                <li className={`${url === "/produtos" ? "text-slate-900" : "text-slate-500"}`}>
-                    <Link href="/produtos">
-                        Produtos
-                    </Link>
-                </li>
-                <li className={`${url === "/clientes" ? "text-slate-900" : "text-slate-500"}`}>
-                    <Link href="/clientes">
-                        Clientes
-                    </Link>
-                </li>
-                <li className={`${url === "/entregas" ? "text-slate-900" : "text-slate-500"}`}>
-                    <Link href="/entregas">
-                        Entregas
-                    </Link>
-                </li>
-            </ul>
-            <Button>
-                Ir para a loja
-            </Button>
-        </div>
+                    <Button className="bg-green-900">
+                        Cadastre-se
+                    </Button>
+                </div>
+            </div>
+        </header>
     )
 }

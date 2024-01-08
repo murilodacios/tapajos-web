@@ -1,46 +1,37 @@
 'use client';
 
-import { Button } from '@/components/ui/button'
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-
-
-import { Home, BadgeDollarSign } from 'lucide-react';
-import { Sidebar } from '@/components/sidebar/Sidebar';
-import { OverviewHome } from '@/components/charts/OverviewHome';
 import Link from 'next/link';
 import { Header } from '@/components/header/Header';
+import { Button } from '@/components/ui/button';
+import Image from 'next/image';
+
+import { CheckCircle2 } from 'lucide-react';
+import { Hero } from '@/components/hero/Hero';
+import { Presentation } from '@/components/presentation/Presentation';
+import { Products } from '@/components/products/Products';
+import { Plataform } from '@/components/plataform/Plataform';
+import { GetStarted } from '@/components/get-started/GetStarted';
 
 
 export default function HomePage() {
 
   return (
-    <main className="max-w-screen-xl m-auto flex flex-col p-4">
-
+    <>
       <Header />
+      <main className="bg-tapajos-black text-white">
 
-      <div className='grid grid-cols-94 gap-8 p-2'>
-        <div>
-          <Sidebar />
+        <div className="max-w-screen-lg m-auto">
+
+          <Hero />
+          <Presentation />
+          <Products />
+          <Plataform />
+          <GetStarted />
+
         </div>
 
-        <div className='flex flex-col gap-4'>
-          <p className='text-lg'>Boa tarde, Murilo Dácio</p>
-          <OverviewHome />
-        </div>
+      </main>
+    </>
 
-      </div>
-
-
-
-
-    </main>
   )
 }

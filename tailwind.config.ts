@@ -8,6 +8,12 @@ module.exports = {
     './src/**/*.{ts,tsx}',
   ],
   theme: {
+    fontFamily: {
+      'Panel-Sans': ["panel-sans", "sans-serif"],
+    },
+    borderWidth: {
+      '1': '1px',
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -18,9 +24,12 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         // Simple 16 column grid
-        '94': '1fr 3fr',
+        '94': '2fr 1fr',
+        '95': '1.5fr 2fr',
       },
       colors: {
+        'tapajos-black': "#001008",
+        'tapajos-green-bg': "#001A0D",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -69,10 +78,15 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        "slow": {
+          '100%': { transform: 'scale(1.2)' },
+          '0%': {transform: "scale(1)"},
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "slow": 'slow 5s cubic-bezier(0, 0, 0.2, 1)',
       },
     },
   },
